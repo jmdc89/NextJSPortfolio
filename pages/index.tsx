@@ -9,6 +9,21 @@ const Home: NextPage = () => {
         <title>Jmdc portfolio</title>
       </Head>
 
+      {/* Header */}
+
+      {/* Hero */}
+
+      {/* About */}
+
+      {/* Experience */}
+
+      {/* Skills */}
+
+      {/* Projects */}
+
+      {/* Contact me */}
+
+
       <h1 className="text-blue-800">Lets build an awesome portfolio</h1>
     </div>
 
