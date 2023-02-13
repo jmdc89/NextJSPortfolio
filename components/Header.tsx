@@ -4,6 +4,10 @@ type Props = {}
 
 export default function Header({}: Props) {
   return (
-    <div>I am a Header</div>
+    <header>
+      <div>
+          {/* Social Icons */}
+      </div>
+    </header>
   )
 }
