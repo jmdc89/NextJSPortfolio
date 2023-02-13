@@ -8,11 +8,6 @@ type Props = {}
 export default function Header({}: Props) {
 
   const [colorMode, setColorMode] = useColorMode();
-  const [isDarkMode, setDarkMode] = React.useState(false);
-
-  const toggleDarkMode = (checked: boolean) => {
-    setDarkMode(checked);
-  };
 
   return (
     <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-0 xl:items-center">
@@ -20,19 +15,19 @@ export default function Header({}: Props) {
         {/* Social Icons */}
         <SocialIcon 
         url="https://www.linkedin.com/in/jos%C3%A9-manuel-dom%C3%ADnguez-425b1b113/"
-        fgColor={ colorMode === "dark" ? "gray" : "black" }
+        fgColor={ colorMode === "dark" ? "black" : "gray" }
         bgColor="transparent"
         />
         <SocialIcon 
         url="https://github.com/jmdc89" 
-        fgColor={ colorMode === "dark" ? "gray" : "black" }
+        fgColor={ colorMode === "dark" ? "black" : "gray" }
         bgColor="transparent"
         />
 
         <SocialIcon
         className="cursor-pointer"
         network="email"
-        fgColor={ colorMode === "dark" ? "gray" : "black" }
+        fgColor={ colorMode === "dark" ? "black" : "gray" }
         bgColor="transparent"
         />
       </div>
@@ -42,11 +37,12 @@ export default function Header({}: Props) {
         <DarkModeSwitch
           style={{zIndex:99}}
           checked={colorMode === "light"}
-          onClick={() => setColorMode(colorMode === "light" ? "dark" : "light")}
+          onChange={() => setColorMode(colorMode === "light" ? "dark" : "light")}
           size={50}
-          moonColor={"black"}
-          sunColor={'gray'}
-        /> 
+          moonColor={"gray"}
+          sunColor={'black'}
+        />
+
         {/* <div className="flex bg-white dark:bg-black">
           <button
             className="dark:text-white text-black bg-white dark:bg-black"
