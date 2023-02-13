@@ -25,8 +25,6 @@ const Home: NextPage = () => {
 
       {/* Contact me */}
 
-
-      <h1 className="text-blue-800">Lets build an awesome portfolio</h1>
     </div>
 
   )
