@@ -1,27 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { SocialIcon } from 'react-social-icons';
-// import useColorMode from "../hooks/useColorMode";
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 
 type Props = {}
 
 export default function Header({}: Props) {
 
-  // const [colorMode, setColorMode] = useColorMode();
-  // console.log(colorMode);
-
   const [colorMode, setColorMode] = useState("light");
-
-  // useEffect(() => {
-  //   const savedColorMode = localStorage.getItem("color-mode");
-  //   if (savedColorMode) {
-  //     setColorMode(savedColorMode);
-  //   }
-  // }, []);
-
-  // useEffect(() => {
-  //   localStorage.setItem("color-mode", colorMode);
-  // }, [colorMode]);
 
   return (
     <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-0 xl:items-center">
