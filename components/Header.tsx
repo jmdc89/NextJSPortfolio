@@ -12,16 +12,16 @@ export default function Header({}: Props) {
 
   const [colorMode, setColorMode] = useState("light");
 
-  useEffect(() => {
-    const savedColorMode = localStorage.getItem("color-mode");
-    if (savedColorMode) {
-      setColorMode(savedColorMode);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const savedColorMode = localStorage.getItem("color-mode");
+  //   if (savedColorMode) {
+  //     setColorMode(savedColorMode);
+  //   }
+  // }, []);
 
-  useEffect(() => {
-    localStorage.setItem("color-mode", colorMode);
-  }, [colorMode]);
+  // useEffect(() => {
+  //   localStorage.setItem("color-mode", colorMode);
+  // }, [colorMode]);
 
   return (
     <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-0 xl:items-center">
