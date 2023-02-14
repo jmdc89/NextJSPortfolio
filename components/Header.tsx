@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { SocialIcon } from 'react-social-icons';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
+import { motion } from "framer-motion";
 
 type Props = {}
 
@@ -27,7 +28,21 @@ export default function Header({}: Props) {
   return (
     <header className="dark:bg-black sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-0 xl:items-center">
       
-      <div className="flex flex-row items-center">
+      <motion.div 
+      initial={{
+        x: -500,
+        opacity: 0,
+        scale: 0.5
+      }}
+      animate={{
+        x: 0,
+        opacity: 1,
+        scale: 1
+      }}
+      transition={{
+        duration: 1.5,
+      }}
+      className="flex flex-row items-center">
 
         {/* Social Icons */}
         <SocialIcon 
@@ -49,9 +64,23 @@ export default function Header({}: Props) {
         bgColor="transparent"
         />
 
-      </div>
+      </motion.div>
 
-      <div className="flex flex-row items-center">
+      <motion.div 
+      initial={{
+        x: 500,
+        opacity: 0,
+        scale: 0.5
+      }}
+      animate={{
+        x: 0,
+        opacity: 1,
+        scale: 1
+      }}
+      transition={{
+        duration: 1.5,
+      }}
+      className="flex flex-row items-center">
 
         <DarkModeSwitch
           // style={{}}
@@ -62,7 +91,7 @@ export default function Header({}: Props) {
           sunColor={'black'}
         />
 
-      </div>
+      </motion.div>
 
     </header>
   )
