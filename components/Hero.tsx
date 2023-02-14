@@ -1,6 +1,7 @@
 import React from 'react';
 import { Cursor, useTypewriter} from 'react-simple-typewriter'
 
+
 type Props = {}
 
 export default function Hero({}: Props) {
@@ -18,9 +19,9 @@ export default function Hero({}: Props) {
 
   return (
     <div>
-        <h1>
+        <h1 className="dark:text-red">
             <span>{text}</span>
-            <Cursor cursorColor="blue" />
+            <Cursor cursorColor="dark:red blue" />
         </h1>
     </div>
   )
