@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import type {NextPage} from "next";
 import Head from 'next/head'
+import Hero from "../components/Hero";
 
 
 const Home: NextPage = () => {
@@ -10,10 +11,12 @@ const Home: NextPage = () => {
         <title>Jmdc portfolio</title>
       </Head>
 
-      {/* Header */}
       <Header />
 
       {/* Hero */}
+      <section id="hero">
+        <Hero />
+      </section>
 
       {/* About */}
 
