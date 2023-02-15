@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {useTheme} from "next-themes";
 import { SocialIcon } from 'react-social-icons';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import { motion } from "framer-motion";
@@ -8,7 +9,11 @@ type Props = {}
 
 export default function Header({}: Props) {
 
-  const [theme, setTheme] = useState("light");
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
+
 
   return (
     <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-100 xl:items-center">
@@ -32,20 +37,20 @@ export default function Header({}: Props) {
         {/* Social Icons */}
         <SocialIcon 
         url="https://www.linkedin.com/in/jos%C3%A9-manuel-dom%C3%ADnguez-425b1b113/"
-        fgColor={ theme === "light" ? "black" : "gray" }
+        fgColor={ theme === 'light' ? "black" : "gray" }
         bgColor="transparent"
         />
 
         <SocialIcon 
         url="https://github.com/jmdc89" 
-        fgColor={ theme === "light" ? "black" : "gray" }
+        fgColor={ theme === 'light' ? "black" : "gray" }
         bgColor="transparent"
         />
 
         <SocialIcon
         className="cursor-pointer"
         network="email"
-        fgColor={ theme === "light" ? "black" : "gray" }
+        fgColor={ theme === 'light' ? "black" : "gray" }
         bgColor="transparent"
         />
 
@@ -83,4 +88,3 @@ export default function Header({}: Props) {
   )
   
 }
-
