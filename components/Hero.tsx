@@ -19,9 +19,9 @@ export default function Hero({}: Props) {
 
   return (
     <div>
-        <h1 className="dark:text-red">
+        <h1 >
             <span>{text}</span>
-            <Cursor cursorColor="dark:red blue" />
+            <Cursor cursorColor="black" />
         </h1>
     </div>
   )
