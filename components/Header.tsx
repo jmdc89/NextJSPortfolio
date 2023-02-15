@@ -2,22 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { SocialIcon } from 'react-social-icons';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import { motion } from "framer-motion";
+import DarkModeButton from './DarkModeButton';
 
 
 
 type Props = {}
 
 export default function Header({}: Props) {
-
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  useEffect(() => {
-    setIsDarkMode(window.matchMedia("(prefers-color-scheme: dark)").matches);
-  }, []);
-
-  const handleDarkModeChange = () => {
-    setIsDarkMode(!isDarkMode);
-  }
 
   return (
     <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-100 xl:items-center">
@@ -81,7 +72,7 @@ export default function Header({}: Props) {
 
           className="flex flex-row items-center">
 
-          <DarkModeSwitch
+          {/* <DarkModeSwitch
             style={{}}
             checked={isDarkMode}
             onChange = {handleDarkModeChange}
@@ -89,7 +80,9 @@ export default function Header({}: Props) {
             size={50}
             moonColor={"gray"}
             sunColor={'black'}
-          />
+          /> */}
+
+          <DarkModeButton />
 
       </motion.div>
 
